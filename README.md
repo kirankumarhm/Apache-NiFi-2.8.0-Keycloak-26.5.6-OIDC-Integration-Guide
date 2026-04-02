@@ -228,7 +228,25 @@ To apply these changes cleanly, follow this sequence:
 3.  **Start NiFi**.
 
 ---
+## 🚀 Phase 4: Add Users and Policies in NiFi
+1. Log in to NiFi using the initial admin user (e.g., `nifi-admin`).
+2. Navigate to the **Users** section.
+3. You should see the authenticated user with the identity from Keycloak (e.g., `nifi-admin`).
+4. Create access policies to grant permissions to the user or groups as needed. For example, grant the `nifi-admin` user full permissions or assign policies to groups like `nifi-admins` for easier management.
 
+
+![Login as Admin](images/validate-ui-1.png)
+![Add User](images/validate-ui-2.png)
+* First add the user (e.g., `NiFi Admins` and `NiFi Users`) to NiFi, then assign policies to that user or the group they belong to. This will allow you to see the flow and manage NiFi as expected.
+
+* Click on the breadcrumbs to navigate to the "Policies" page, then click the "+" button to add policies for the user or group. For example, you can grant "All Permissions" to the `nifi-admin` user or the `NiFi Admins` group.
+"View the interface" permission allows users to see the flow but not make changes, while "All Permissions" grants full access.
+![Add User](images/validate-ui-3.png)
+![Add User](images/validate-ui-4.png)
+![Add User](images/validate-ui-5.png)
+![Add User](images/validate-ui-6.png)
+
+---
 ## 🛠️ Troubleshooting Guide
 
 | Issue | Symptom | Root Cause & Resolution |
